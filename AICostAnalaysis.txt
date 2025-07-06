@@ -10,3 +10,53 @@ Claude 3.5 Haiku	AWS Bedrock	$0.00080	$0.00400	$6.00
 Claude 3 Sonnet	AWS Bedrock	$0.00300	$0.01500	$24.00
 Claude 3.5 Sonnet	AWS Bedrock	$0.00300	$0.01500	$24.00
 Claude 3 Opus	AWS Bedrock	$0.01500	$0.07500	$120.00
+
+
+
+Assumptions
+Parameter	Value
+Total tokens (initial)	~285M tokens (750 words/page × 150 pages + ~1GB code)
+Embedding cost per 1K tokens	$0.0004 (OpenAI ada-002 equivalent)
+Monthly change rate	25% (i.e. ~71.25M tokens/month)
+
+Platform	One-Time Embedding Cost	Base Infra Cost (Monthly)	Monthly Re-Embedding Cost (25%)	Total Monthly Cost After Setup	Notes
+Azure Cosmos DB (Provisioned)	$114	~$69 (1K RU/s)	~$29 (71.25M tokens × $0.0004)	~$98/month	Need to manage RU/s
+Azure Cosmos DB (Serverless)	$114	~$0–$10 (based on usage)	~$29	~$29–$39/month	Cheaper but may have variable latency
+Azure Cognitive Search (Basic)	$114	$74	~$29	~$103/month	Fully managed and scalable
+AWS Bedrock + OpenSearch	$114	~$700 (OpenSearch infra)	~$29	~$729/month	Costliest by far
+
+
+1. Azure Cosmos DB (Provisioned RU/s)
+Pros	Cons
+Fine-grained RU control (performance tuning)	You must estimate and provision RU/s
+Can scale to large data sets and workloads	Paying continuously, even during low usage
+Vector search support (DiskANN)	More DevOps effort to optimize RU usage
+Good for custom workflows or transactional use	Complex for search-heavy, read-heavy use
+
+2. Azure Cosmos DB (Serverless)
+Pros	Cons
+Pay only for what you use (cost-efficient)	Potential for cold starts and latency spikes
+No provisioning or scaling overhead	Not suitable for high-concurrency workloads
+Ideal for bursty or low-traffic workloads	Throughput caps (best-effort concurrency)
+
+3. Azure Cognitive Search (Basic Tier)
+Pros	Cons
+Fully managed, no RU tuning required	Fixed monthly cost ($74/month)
+Built-in vector, keyword, and hybrid search	Limited to 15 GB index in Basic tier
+Ideal for search-based RAG, document Q&A	Less flexible for transactional or structured queries
+Simplified ingestion and search API	Requires external service for embedding
+
+Recommendation
+Use Azure Cognitive Search (Basic Tier)
+Why:
+
+Simplest to set up and operate for your RAG use case.
+
+Fully managed: no need to think about provisioning, scaling, or throughput.
+
+Supports hybrid vector + keyword search, ideal for Confluence + code + PDF.
+
+Clean integration with Azure OpenAI and pipelines for ingestion.
+
+If cost is a critical constraint and usage is very low or sporadic, Cosmos DB Serverless could be considered, but it adds more engineering effort to handle indexing, querying, and search relevance tuning.
+
