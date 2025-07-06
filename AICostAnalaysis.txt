@@ -30,10 +30,10 @@ Embedding cost per 1K tokens	$0.00002 (text-embedding-3-small)
 Monthly change rate	25% (i.e. ~71.25M tokens/month)
 
 Platform	One-Time Embedding Cost	Base Infra Cost (Monthly)	Monthly Re-Embedding Cost (25%)	Total Monthly Cost After Setup	Notes
-Azure Cosmos DB (Provisioned)	$114	~$69 (1K RU/s)	~$29 (71.25M tokens × $0.0004)	~$98/month	Need to manage RU/s
-Azure Cosmos DB (Serverless)	$114	~$0–$10 (based on usage)	~$29	~$29–$39/month	Cheaper but may have variable latency
-Azure Cognitive Search (Basic)	$114	$74	~$29	~$103/month	Fully managed and scalable
-AWS Bedrock + OpenSearch	$114	~$700 (OpenSearch infra)	~$29	~$729/month	Costliest by far
+Azure Cosmos DB (Provisioned)	$5.70 (285M×0.00002)	$69 (1K RU/s)	$1.43 (71.25M×0.00002)	$70.43/month	Need to manage RU/s provisioning
+Azure Cosmos DB (Serverless)	$5.70	$0–10 (usage-based)	$1.43	$1.43–$11.43/month	Minimal ops, variable latency
+Azure Cognitive Search (Basic)	$5.70	$74	$1.43	$75.43/month	Fully managed PaaS, indexing complexity handled
+AWS Bedrock + OpenSearch	$28.50 (285M×0.00010)	$700 (OpenSearch infra)	$7.13 (71.25M×0.00010)	$707.13/month	Highest cost, complex AWS infra + embedding pipeline
 
 
 1. Azure Cosmos DB (Provisioned RU/s)
