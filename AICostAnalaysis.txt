@@ -1,0 +1,12 @@
+Model	Provider	Input $ / 1K Tokens	Output $ / 1K Tokens	Monthly Cost Estimate
+GPT-4o mini	Azure OpenAI	$0.00015	$0.00060	$1.80
+GPT-4o (128K)	Azure OpenAI	$0.00250	$0.01000	$20.00
+GPT-3.5 Turbo (16K)	Azure OpenAI	$0.00050	$0.00150	$3.50
+LLaMA 3 8B	AWS Bedrock	$0.00030	$0.00060	$2.40
+LLaMA 3 70B	AWS Bedrock	$0.00195	$0.00256	$9.76
+Mistral 7B	AWS Bedrock	$0.00023	$0.00045	$1.57
+Claude 3 Haiku	AWS Bedrock	$0.00025	$0.00125	$2.25
+Claude 3.5 Haiku	AWS Bedrock	$0.00080	$0.00400	$6.00
+Claude 3 Sonnet	AWS Bedrock	$0.00300	$0.01500	$24.00
+Claude 3.5 Sonnet	AWS Bedrock	$0.00300	$0.01500	$24.00
+Claude 3 Opus	AWS Bedrock	$0.01500	$0.07500	$120.00
