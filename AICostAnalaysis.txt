@@ -12,11 +12,21 @@ Claude 3.5 Sonnet	AWS Bedrock	$0.00300	$0.01500	$24.00
 Claude 3 Opus	AWS Bedrock	$0.01500	$0.07500	$120.00
 
 
+Feature	text-embedding-ada-002	text-embedding-3-small	text-embedding-3-large
+Launched	Dec 2022	Jan 2024	Jan 2024
+Vector Dimension	1536	512	3072
+Price per 1K tokens	$0.0001	$0.00002	$0.00013
+Performance (semantic accuracy)	Good baseline	 Very good (close to large)	 Best (highest accuracy)
+Speed / Latency	Moderate	 Fast	 Slower (larger vector)
+Storage Cost & Search Speed	Medium	 Low (compact, fast search)	 High (large vector size)
+OpenAI Family	Legacy	Latest	Latest
+Recommended Use	Legacy apps, low-accuracy	 RAG, enterprise, cost-sensitive	High-precision, reasoning-heavy
+
 
 Assumptions
 Parameter	Value
 Total tokens (initial)	~285M tokens (750 words/page × 150 pages + ~1GB code)
-Embedding cost per 1K tokens	$0.0004 (OpenAI ada-002 equivalent)
+Embedding cost per 1K tokens	$0.00002 (text-embedding-3-small)
 Monthly change rate	25% (i.e. ~71.25M tokens/month)
 
 Platform	One-Time Embedding Cost	Base Infra Cost (Monthly)	Monthly Re-Embedding Cost (25%)	Total Monthly Cost After Setup	Notes
