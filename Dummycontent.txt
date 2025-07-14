@@ -1,0 +1,8 @@
+1) How do you know this person?
+I’ve worked closely with Pratyush in a professional setting and have known him for several years. Our interactions span both technical and collaborative domains, where I’ve observed his problem-solving skills, code quality, and teamwork firsthand. I’m referring him to our organization based on this direct experience and confidence in his capabilities.
+
+2) General Comments
+Pratyush is a well-rounded and reliable full-stack engineer with over 5 years of solid experience across Java, Spring Boot, ReactJS, and modern frontend/backend tooling. He demonstrates consistent initiative and ownership, having led teams and modernized legacy systems effectively. He’s proactive, adapts quickly to new technologies (like Sanity.io and Next.js), and has a strong understanding of scalable architecture. His awards at Accenture further validate his contributions and recognition at an organizational level
+
+3) Comments on Resume
+Pratyush’s resume is well-organized and highlights both technical depth and practical impact effectively. It demonstrates his experience across the full-stack spectrum, with clear emphasis on modern frameworks, performance optimization, and leadership in real-world projects. The inclusion of metrics, awards, and personal projects adds credibility and shows initiative beyond assigned responsibilities. With minor refinements, it serves as a strong representation of his skills and accomplishments.
