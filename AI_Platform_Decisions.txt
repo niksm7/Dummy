@@ -1,0 +1,19 @@
+Arguments
+
+- Research shows that Copilot Studio “is likely your starting point” only if you need quick, low‑code agents that reach into M365/Teams.
+In contrast, Azure AI Foundry is designed to “connect to enterprise data sources” and wire agents into services like Azure Cognitive Search or any REST endpoint
+
+- Azure AI Foundry is expressly designed for retrieval-augmented generation (RAG) with Advanced data indexing. Microsoft highlights that Foundry “specializes in advanced AI capabilities like RAG”
+And complex RAG is the main pillar of our project, which does heavy code analysis and performs detailed actions involving various multi-step features.
+
+- Our future vision involves multiple specialized agents with a supervisor agent. 
+Both platforms support multi-agent orchestration, but in different styles. 
+Copilot Studio has a built‑in “multi-agent orchestration” feature that lets multiple bots collaborate under Teams workflows. 
+Azure AI Foundry provides an “Agent Service” specifically for orchestrating complex, multi-agent systems. 
+In practice, Azure’s Agent Service is designed for production-grade agent networks (with CI/CD, monitoring, etc.), while Copilot’s multi-agent is more of a high-level flow builder. 
+Thus, both can do multi-agent, but Azure’s approach is more scalable and customizable for enterprise use.
+
+Sources:
+https://envisionit.com/resources/articles/copilot-studio-vs-azure-ai-foundry-choosing-the-right-tool-for-ai-agents
+https://techcommunity.microsoft.com/blog/azure-ai-services-blog/navigating-ai-solutions-microsoft-copilot-studio-vs-azure-ai-foundry/4411678#:~:text=Azure%20AI%20Foundry%20specializes%20in,ensuring%20data%20compliance%20and%20security
+https://www.itmagination.com/blog/ai-agents-microsoft-365-copilot-copilot-studio-ai-foundry
