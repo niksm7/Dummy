@@ -1,0 +1,64 @@
+Why Docker matters
+
+Docker forms the foundation of modern cloud microservice architecture at Barclays:
+
+- Docker provides the standard container runtime that powers cloud-native applications.
+
+- Acts as the baseline for orchestration platforms like Kubernetes (SIK) and enterprise platforms like BCP.
+
+- Ensures consistency across development, testing, and production.
+
+- Enables portability, scalability, and faster deployments—core for modern microservices.
+
+
+Base image selection:
+
+Security First
+Choose minimal, well-maintained images to reduce attack surface
+
+Size Matters
+Smaller images mean faster builds, deployments, and reduced storage costs
+
+Compatibility
+Ensure base image supports your application requirements
+
+
+
+Powerful Local Setup:
+
+Rapid Iteration
+
+Efficient local setup enables faster development cycles and immediate feedback
+
+Environment Parity
+
+Local environment that mirrors production reduces surprises during deployment
+
+Isolated Testing
+
+Test changes in isolation before integration with broader systems
+
+
+Docker compose:
+
+Docker Compose solves complex local setup challenges:
+
+Define multi-container applications in a single YAML file
+
+Manage service dependencies automatically
+
+Create isolated networks for your application stack
+
+Simplify volume mounting for development
+
+
+
+Why vulnerability scanning matters:
+
+Prevents known vulnerabilities from reaching production
+
+Ensures regulatory compliance for financial services
+
+Protects customer data and company reputation
+
+Prisma scans are mandatory before promotion from staging to production
