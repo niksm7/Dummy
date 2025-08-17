@@ -52,6 +52,14 @@ Create isolated networks for your application stack
 Simplify volume mounting for development
 
 
+Debugging:
+
+Developers can run their Java app in Docker with debugging ports exposed.
+
+The IDE connects just like it would to a remote JVM, but here it’s inside a container.
+
+This ensures the debugging environment is consistent with production, while still giving local developer flexibility.
+
 
 Why vulnerability scanning matters:
 
